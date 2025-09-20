@@ -1,8 +1,10 @@
 import requests
 
 
-def buscar_comentarios():
-    """Busca comentários da API"""
+def buscar_comentarios() -> list | None:
+    """
+    Busca comentários da JSONPlaceholder
+    """
     print("Buscando comentários...")
     try:
         resp = requests.get("https://jsonplaceholder.typicode.com/comments", timeout=10)

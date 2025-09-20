@@ -5,7 +5,11 @@ from src.dados import calcular_estatisticas, processar_dados
 from src.api import buscar_comentarios
 
 def medir_tempo(func):
-    """Decorator para medir tempo"""
+    """
+    Decorator para medir tempo
+    func: função a ser medida
+    retorna: função decorada
+    """
     def wrapper(*args):
         inicio = time.time()
         resultado = func(*args)
@@ -16,7 +20,7 @@ def medir_tempo(func):
     return wrapper
 
 
-def executar_testes():
+def executar_testes() -> None:
     """Testes básicos dos módulos"""
     print("EXECUTANDO TESTES")
 

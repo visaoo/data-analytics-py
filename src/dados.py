@@ -1,6 +1,6 @@
 import pandas as pd
 
-def processar_dados(dados):
+def processar_dados(dados: list) -> pd.DataFrame:
     """Converte para DataFrame e adiciona colunas"""
     print("Processando...")
     df = pd.DataFrame(dados)
@@ -11,7 +11,7 @@ def processar_dados(dados):
     return df
 
 
-def calcular_estatisticas(df):
+def calcular_estatisticas(df: pd.DataFrame) -> dict:
     """Calcula estatísticas básicas"""
     print("Calculando estatísticas...")
     return {
@@ -24,7 +24,7 @@ def calcular_estatisticas(df):
     }
 
 
-def exibir_resultados(stats):
+def exibir_resultados(stats: dict) -> None:
     """Mostra resultados"""
     print("\n" + "="*40)
     print("RESULTADOS")

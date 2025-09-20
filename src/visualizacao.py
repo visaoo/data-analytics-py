@@ -1,13 +1,15 @@
-"""
-Módulo de visualização e exportação
-"""
-
 import matplotlib.pyplot as plt
 from datetime import datetime
+import pandas as pd
 
-
-def criar_graficos(df):
-    """Cria 2 gráficos simples"""
+def criar_graficos(df: pd.DataFrame) -> str:
+    """
+    Cria 3 gráficos simples
+    1. Histograma do tamanho dos comentários.
+    2. Histograma dos comentários com mais de 6 palavras.
+    3. Barras dos posts com mais de 20 caracteres.
+    E salva como PNG.
+    """
     print("Criando gráficos...")
 
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 4))
@@ -41,8 +43,10 @@ def criar_graficos(df):
     return arquivo
 
 
-def salvar_csv(df):
-    """Salva CSV"""
+def salvar_csv(df: pd.DataFrame) -> str | None:
+    """
+    Salva CSV
+    """
     try:
         arquivo = f"dados_{datetime.now().strftime('%H%M%S')}.csv"
         df.to_csv(arquivo, index=False)
