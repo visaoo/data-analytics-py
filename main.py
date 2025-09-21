@@ -25,7 +25,6 @@ def analise_completa():
         print(f"Arquivos: {arquivo_grafico}, {arquivo_csv}")
     except Exception as e:
         print(f"Erro durante a análise: {e}")
-        print("Tente executar: python main.py teste")
 
 
 def analise_rapida():

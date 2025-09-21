@@ -1,7 +1,9 @@
 import pandas as pd
 
 def processar_dados(dados: list) -> pd.DataFrame:
-    """Converte para DataFrame e adiciona colunas"""
+    """
+    Converte para DataFrame e adiciona colunas
+    """
     print("Processando...")
     df = pd.DataFrame(dados)
     df['tamanho_nome'] = df['name'].str.len()
@@ -10,9 +12,10 @@ def processar_dados(dados: list) -> pd.DataFrame:
     print(f"{df.shape[0]} linhas processadas")
     return df
 
-
 def calcular_estatisticas(df: pd.DataFrame) -> dict:
-    """Calcula estatísticas básicas"""
+    """
+    Calcula estatísticas básicas
+    """
     print("Calculando estatísticas...")
     return {
         'total': len(df),
@@ -23,9 +26,10 @@ def calcular_estatisticas(df: pd.DataFrame) -> dict:
         'menor_comentario': df['tamanho_corpo'].min()
     }
 
-
 def exibir_resultados(stats: dict) -> None:
-    """Mostra resultados"""
+    """
+    Mostra resultados no console
+    """
     print("\n" + "="*40)
     print("RESULTADOS")
     print("="*40)

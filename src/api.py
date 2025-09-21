@@ -1,6 +1,5 @@
 import requests
 
-
 def buscar_comentarios() -> list | None:
     """
     Busca comentários da JSONPlaceholder

@@ -19,7 +19,6 @@ def medir_tempo(func):
 
     return wrapper
 
-
 def executar_testes() -> None:
     """Testes básicos dos módulos"""
     print("EXECUTANDO TESTES")
